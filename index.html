@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestra Historia </title>
+    <meta name="description" content="Un álbum interactivo de nuestra historia de amor">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Quicksand:wght@300;400;500;600;700&family=Dancing+Script:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- AOS - Animate On Scroll -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- Floating Music Toggle -->
+    <button id="music-toggle" class="music-btn" aria-label="Toggle música">
+        <span class="music-icon">🎵</span>
+    </button>
+
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator" id="scroll-indicator">
+        <div class="scroll-arrow">
+            <span>▼</span>
+        </div>
+        <p>Desliza hacia abajo</p>
+    </div>
+
+    <!-- ==================== COVER ==================== -->
+    <section class="section cover-section" id="cover">
+        <div class="floating-hearts" aria-hidden="true">
+            <span class="heart heart-1">♥</span>
+            <span class="heart heart-2">♥</span>
+            <span class="heart heart-3">♥</span>
+            <span class="heart heart-4">♥</span>
+            <span class="heart heart-5">♥</span>
+            <span class="heart heart-6">♥</span>
+            <span class="heart heart-7">♥</span>
+            <span class="heart heart-8">♥</span>
+        </div>
+        <div class="cover-content">
+            <div class="cover-heart animate__animated animate__heartBeat animate__infinite animate__slower">
+
+            </div>
+            <h1 class="cover-title" id="cover-title">Nuestra Historia</h1>
+            <p class="cover-subtitle" id="cover-subtitle">Un pequeño recorrido por los momentos que me hicieron
+                enamorarme de ti...</p>
+            <div class="cover-divider">✦ ✦ ✦</div>
+        </div>
+    </section>
+
+    <!-- ==================== ALBUM SECTION 1 ==================== -->
+    <section class="section album-section" id="section-1">
+        <!-- Sticker slots -->
+        <div class="sticker-container" aria-hidden="true">
+            <img src="img/stickers/sticker1.png" alt="" class="sticker sticker-slot-1"
+                onerror="this.style.display='none'">
+            <img src="img/stickers/sticker2.png" alt="" class="sticker sticker-slot-2"
+                onerror="this.style.display='none'">
+            <img src="img/stickers/sticker3.png" alt="" class="sticker sticker-slot-3"
+                onerror="this.style.display='none'">
+        </div>
+        <div class="album-card" data-aos="fade-up" data-aos-duration="1200">
+            <div class="album-image-wrapper">
+                <div class="polaroid-frame">
+                    <div class="polaroid-photo">
+                        <img src="img/foto1.jpg" alt="Nuestra primera foto juntos" class="album-image"
+                            onerror="this.style.display='none'; this.parentElement.nextElementSibling.style.display='flex';">
+
+                    </div>
+                    <div class="polaroid-caption">♡ Nuestro comienzo</div>
+                </div>
+            </div>
+            <div class="album-text" data-aos="fade-left" data-aos-delay="300">
+                <span class="section-number">01</span>
+                <h2 class="album-phrase">Desde el primer momento supe que eras especial</h2>
+                <p class="album-description">Hay personas que llegan a tu vida y lo cambian todo. Tú fuiste esa persona
+                    para mí. Desde que te vi, algo dentro de mí supo que iba a ser diferente contigo.</p>
+                <div class="album-decoration">♥</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== ALBUM SECTION 2 ==================== -->
+    <section class="section album-section alt-layout" id="section-2">
+        <div class="sticker-container" aria-hidden="true">
+            <img src="img/stickers/sticker4.png" alt="" class="sticker sticker-slot-1"
+                onerror="this.style.display='none'">
+            <img src="img/stickers/sticker5.png" alt="" class="sticker sticker-slot-2"
+                onerror="this.style.display='none'">
+            <img src="img/stickers/sticker6.png" alt="" class="sticker sticker-slot-3"
+                onerror="this.style.display='none'">
+        </div>
+        <div class="album-card" data-aos="fade-up" data-aos-duration="1200">
+            <div class="album-image-wrapper">
+                <div class="polaroid-frame">
+                    <div class="polaroid-photo">
+                        <img src="img/foto2.jpg" alt="Momento especial juntos" class="album-image"
+                            onerror="this.style.display='none'; this.parentElement.nextElementSibling.style.display='flex';">
+
+                    </div>
+                    <div class="polaroid-caption">♡ Tu sonrisa</div>
+                </div>
+            </div>
+            <div class="album-text" data-aos="fade-right" data-aos-delay="300">
+                <span class="section-number">02</span>
+                <h2 class="album-phrase">Tu sonrisa es mi lugar favorito</h2>
+                <p class="album-description">Cada vez que sonríes, el mundo se detiene un poco. No importa cómo haya
+                    sido mi día, una sola sonrisa tuya lo arregla todo.</p>
+                <div class="album-decoration">♥</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== ALBUM SECTION 3 ==================== -->
+    <section class="section album-section" id="section-3">
+        <div class="sticker-container" aria-hidden="true">
+            <img src="img/stickers/sticker7.png" alt="" class="sticker sticker-slot-1"
+                onerror="this.style.display='none'">
+            <img src="img/stickers/sticker8.png" alt="" class="sticker sticker-slot-2"
+                onerror="this.style.display='none'">
+            <img src="img/stickers/sticker9.png" alt="" class="sticker sticker-slot-3"
+                onerror="this.style.display='none'">
+        </div>
+        <div class="album-card" data-aos="fade-up" data-aos-duration="1200">
+            <div class="album-image-wrapper">
+                <div class="polaroid-frame">
+                    <div class="polaroid-photo">
+                        <img src="img/foto3.jpg" alt="Aventura juntos" class="album-image"
+                            onerror="this.style.display='none'; this.parentElement.nextElementSibling.style.display='flex';">
+
+                    </div>
+                    <div class="polaroid-caption">♡ Nuestra aventura</div>
+                </div>
+            </div>
+            <div class="album-text" data-aos="fade-left" data-aos-delay="300">
+                <span class="section-number">03</span>
+                <h2 class="album-phrase">Contigo cada momento es una aventura</h2>
+                <p class="album-description">No importa si estamos haciendo algo increíble o simplemente estando juntos
+                    sin hacer nada. Contigo, hasta lo más simple se convierte en un recuerdo inolvidable.</p>
+                <div class="album-decoration">♥</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== ALBUM SECTION 4 ==================== -->
+    <section class="section album-section alt-layout" id="section-4">
+        <div class="sticker-container" aria-hidden="true">
+            <img src="img/stickers/sticker10.png" alt="" class="sticker sticker-slot-1"
+                onerror="this.style.display='none'">
+            <img src="img/stickers/sticker11.png" alt="" class="sticker sticker-slot-2"
+                onerror="this.style.display='none'">
+            <img src="img/stickers/sticker12.png" alt="" class="sticker sticker-slot-3"
+                onerror="this.style.display='none'">
+        </div>
+        <div class="album-card" data-aos="fade-up" data-aos-duration="1200">
+            <div class="album-image-wrapper">
+                <div class="polaroid-frame">
+                    <div class="polaroid-photo">
+                        <img src="img/foto4.jpg" alt="Momento divertido" class="album-image"
+                            onerror="this.style.display='none'; this.parentElement.nextElementSibling.style.display='flex';">
+
+                    </div>
+                    <div class="polaroid-caption">♡ Risas juntos</div>
+                </div>
+            </div>
+            <div class="album-text" data-aos="fade-right" data-aos-delay="300">
+                <span class="section-number">04</span>
+                <h2 class="album-phrase">Me encanta cómo me haces reír</h2>
+                <p class="album-description">Las mejores historias de amor están llenas de risas. Y tú me haces reír
+                    como nadie. Cada chiste, cada mirada cómplice, cada momento de risa que compartimos es un tesoro que
+                    guardo en el corazón.</p>
+                <div class="album-decoration">♥</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== ALBUM SECTION 5 ==================== -->
+    <section class="section album-section" id="section-5">
+        <div class="sticker-container" aria-hidden="true">
+            <img src="img/stickers/sticker13.png" alt="" class="sticker sticker-slot-1"
+                onerror="this.style.display='none'">
+            <img src="img/stickers/sticker14.png" alt="" class="sticker sticker-slot-2"
+                onerror="this.style.display='none'">
+            <img src="img/stickers/sticker15.png" alt="" class="sticker sticker-slot-3"
+                onerror="this.style.display='none'">
+        </div>
+        <div class="album-card" data-aos="fade-up" data-aos-duration="1200">
+            <div class="album-image-wrapper">
+                <div class="polaroid-frame">
+                    <div class="polaroid-photo">
+                        <img src="img/foto5.jpg" alt="Momento romántico" class="album-image"
+                            onerror="this.style.display='none'; this.parentElement.nextElementSibling.style.display='flex';">
+
+                    </div>
+                    <div class="polaroid-caption">♡ Lo mejor de mi vida</div>
+                </div>
+            </div>
+            <div class="album-text" data-aos="fade-left" data-aos-delay="300">
+                <span class="section-number">05</span>
+                <h2 class="album-phrase">Eres lo mejor que me ha pasado</h2>
+                <p class="album-description">Si pudiera regresar el tiempo, no cambiaría nada. Cada decisión, cada
+                    camino me llevó hasta ti. Y eso es lo más bonito que la vida me ha regalado.</p>
+                <div class="album-decoration">♥</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== ALBUM SECTION 6 ==================== -->
+    <section class="section album-section alt-layout" id="section-6">
+        <div class="sticker-container" aria-hidden="true">
+            <img src="img/stickers/sticker16.png" alt="" class="sticker sticker-slot-1"
+                onerror="this.style.display='none'">
+            <img src="img/stickers/sticker17.png" alt="" class="sticker sticker-slot-2"
+                onerror="this.style.display='none'">
+            <img src="img/stickers/sticker18.png" alt="" class="sticker sticker-slot-3"
+                onerror="this.style.display='none'">
+        </div>
+        <div class="album-card" data-aos="fade-up" data-aos-duration="1200">
+            <div class="album-image-wrapper">
+                <div class="polaroid-frame">
+                    <div class="polaroid-photo">
+                        <img src="img/foto6.jpg" alt="Nuestro momento especial" class="album-image"
+                            onerror="this.style.display='none'; this.parentElement.nextElementSibling.style.display='flex';">
+
+                    </div>
+                    <div class="polaroid-caption">♡ Para siempre</div>
+                </div>
+            </div>
+            <div class="album-text" data-aos="fade-right" data-aos-delay="300">
+                <span class="section-number">06</span>
+                <h2 class="album-phrase">No quiero imaginar mi vida sin ti</h2>
+                <p class="album-description">Llegaste a mi vida en el momento perfecto. No quiero un día sin tu voz, sin
+                    tu compañía, sin esa magia que solo tú tienes. Quiero que esto sea para siempre.</p>
+                <div class="album-decoration">♥</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== TRANSITION ==================== -->
+    <section class="section transition-section" id="transition">
+        <div class="transition-content" data-aos="zoom-in" data-aos-duration="1500">
+            <p class="transition-text">Y después de todo lo que hemos vivido juntos...</p>
+            <p class="transition-text-sub" data-aos="fade-up" data-aos-delay="800">tengo algo muy importante que
+                preguntarte...</p>
+            <div class="transition-hearts">
+                <span>Pero antes quiero que veas esto...</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== GALLERY CAROUSEL ==================== -->
+    <section class="section gallery-section" id="gallery">
+        <div class="gallery-wrapper">
+            <h2 class="gallery-title" data-aos="fade-up">Nuestros Momentos </h2>
+            <p class="gallery-subtitle" data-aos="fade-up" data-aos-delay="200">Toca una foto para verla en grande</p>
+            <div class="gallery-track-wrapper" data-aos="fade-up" data-aos-delay="400">
+                <div class="gallery-track" id="gallery-track">
+                    <!-- Gallery images: duplicate set for infinite loop -->
+                    <div class="gallery-item" data-src="img/gallery/g1.jpg">
+                        <img src="img/gallery/g1.jpg" alt="Recuerdo 1"
+                            onerror="this.parentElement.style.display='none'">
+                    </div>
+                    <div class="gallery-item" data-src="img/gallery/g2.jpg">
+                        <img src="img/gallery/g2.jpg" alt="Recuerdo 2"
+                            onerror="this.parentElement.style.display='none'">
+                    </div>
+                    <div class="gallery-item" data-src="img/gallery/g3.jpg">
+                        <img src="img/gallery/g3.jpg" alt="Recuerdo 3"
+                            onerror="this.parentElement.style.display='none'">
+                    </div>
+                    <div class="gallery-item" data-src="img/gallery/g4.jpg">
+                        <img src="img/gallery/g4.jpg" alt="Recuerdo 4"
+                            onerror="this.parentElement.style.display='none'">
+                    </div>
+                    <div class="gallery-item" data-src="img/gallery/g5.jpg">
+                        <img src="img/gallery/g5.jpg" alt="Recuerdo 5"
+                            onerror="this.parentElement.style.display='none'">
+                    </div>
+                    <div class="gallery-item" data-src="img/gallery/g6.jpg">
+                        <img src="img/gallery/g6.jpg" alt="Recuerdo 6"
+                            onerror="this.parentElement.style.display='none'">
+                    </div>
+                    <div class="gallery-item" data-src="img/gallery/g7.jpg">
+                        <img src="img/gallery/g7.jpg" alt="Recuerdo 7"
+                            onerror="this.parentElement.style.display='none'">
+                    </div>
+                    <div class="gallery-item" data-src="img/gallery/g8.jpg">
+                        <img src="img/gallery/g8.jpg" alt="Recuerdo 8"
+                            onerror="this.parentElement.style.display='none'">
+                    </div>
+                    <div class="gallery-item" data-src="img/gallery/g9.jpg">
+                        <img src="img/gallery/g9.jpg" alt="Recuerdo 9"
+                            onerror="this.parentElement.style.display='none'">
+                    </div>
+                    <div class="gallery-item" data-src="img/gallery/g10.jpg">
+                        <img src="img/gallery/g10.jpg" alt="Recuerdo 10"
+                            onerror="this.parentElement.style.display='none'">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Overlay -->
+    <div class="lightbox-overlay" id="lightbox">
+        <button class="lightbox-close" id="lightbox-close" aria-label="Cerrar">✕</button>
+        <button class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="Anterior">‹</button>
+        <button class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="Siguiente">›</button>
+        <div class="lightbox-content">
+            <img src="" alt="Foto ampliada" id="lightbox-img" class="lightbox-img">
+        </div>
+    </div>
+
+    <!-- ==================== THE QUESTION ==================== -->
+    <section class="section question-section" id="question">
+        <div class="floating-hearts floating-hearts-question" aria-hidden="true">
+            <span class="heart heart-1">♥</span>
+            <span class="heart heart-2">♥</span>
+            <span class="heart heart-3">♥</span>
+            <span class="heart heart-4">♥</span>
+            <span class="heart heart-5">♥</span>
+            <span class="heart heart-6">♥</span>
+        </div>
+        <div class="question-content" id="question-content">
+            <div class="question-heart"></div>
+            <h2 class="question-title" id="question-title">¿Quieres ser mi novia?</h2>
+            <p class="question-subtitle">Nada me haría más feliz </p>
+            <div class="question-buttons" id="question-buttons">
+                <button id="btn-yes" class="btn btn-yes">
+                    <span>¡Sí, quiero! </span>
+                </button>
+                <button id="btn-no" class="btn btn-no">
+                    <span>No </span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Celebration Overlay -->
+        <div class="celebration-overlay" id="celebration">
+            <div class="celebration-content">
+                <h2 class="celebration-title animate__animated animate__tada">¡¡Sííííí!! 🎉💖🎉</h2>
+                <p class="celebration-text">Prometo hacerte la persona más feliz del mundo. Este es solo el comienzo de
+                    nuestra historia juntos. 💕</p>
+                <div class="celebration-hearts">
+                    <span class="animate__animated animate__heartBeat animate__infinite">💖</span>
+                    <span class="animate__animated animate__heartBeat animate__infinite animate__delay-1s">💕</span>
+                    <span class="animate__animated animate__heartBeat animate__infinite animate__delay-2s">💗</span>
+                </div>
+                <p class="celebration-footer">Te quiero muchísimo ❤️</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SCRIPTS ==================== -->
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <!-- Canvas Confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+    <!-- Custom Script -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
