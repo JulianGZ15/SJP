@@ -1,7 +1,3 @@
-/* ============================================
-   ÁLBUM INTERACTIVO - SCRIPT PRINCIPAL
-   ============================================ */
-
 document.addEventListener('DOMContentLoaded', () => {
     initAOS();
     initCoverAnimation();
@@ -35,15 +31,15 @@ function initCoverAnimation() {
         duration: 1.2,
         delay: 0.5
     })
-    .to('#cover-subtitle', {
-        opacity: 1,
-        y: 0,
-        duration: 1
-    }, '-=0.6')
-    .to('.cover-divider', {
-        opacity: 1,
-        duration: 0.8
-    }, '-=0.4');
+        .to('#cover-subtitle', {
+            opacity: 1,
+            y: 0,
+            duration: 1
+        }, '-=0.6')
+        .to('.cover-divider', {
+            opacity: 1,
+            duration: 0.8
+        }, '-=0.4');
 }
 
 /* ---- Question Section Animation ---- */
@@ -56,23 +52,23 @@ function initQuestionAnimation() {
         start: 'top 60%',
         onEnter: () => {
             const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
-            
+
             tl.to('.question-title', {
                 opacity: 1,
                 y: 0,
                 duration: 1,
                 delay: 0.3
             })
-            .to('.question-subtitle', {
-                opacity: 1,
-                y: 0,
-                duration: 0.8
-            }, '-=0.4')
-            .to('.question-buttons', {
-                opacity: 1,
-                y: 0,
-                duration: 0.8
-            }, '-=0.3');
+                .to('.question-subtitle', {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.8
+                }, '-=0.4')
+                .to('.question-buttons', {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.8
+                }, '-=0.3');
         },
         once: true
     });
@@ -83,20 +79,20 @@ function initNoButton() {
     const btnNo = document.getElementById('btn-no');
     let escapeCount = 0;
     const funnyTexts = [
-        'No 😢',
-        '¿Segura? 🥺',
-        'Piénsalo... 💭',
-        '¿De verdad? 😿',
-        'Reconsidéralo 🥹',
-        'Dale que sí 💖',
-        '¡Por favor! 🙏',
-        '¿Ni tantito? 😭',
-        'Ándale... 💕'
+        'No',
+        '¿Segura?',
+        'Piénsalo...',
+        '¿De verdad?',
+        'Reconsidéralo',
+        'Dale que sí',
+        '¡Por favor!',
+        '¿Ni tantito?',
+        'Ándale...'
     ];
 
     function moveButton() {
         escapeCount++;
-        
+
         // Update button text
         if (escapeCount < funnyTexts.length) {
             btnNo.querySelector('span').textContent = funnyTexts[escapeCount];
@@ -113,7 +109,7 @@ function initNoButton() {
         const btnHeight = btnNo.offsetHeight;
         const maxX = window.innerWidth - btnWidth - padding;
         const maxY = window.innerHeight - btnHeight - padding;
-        
+
         const randomX = Math.max(padding, Math.random() * maxX);
         const randomY = Math.max(padding, Math.random() * maxY);
 
@@ -203,7 +199,7 @@ function fireConfetti() {
 /* ---- Scroll Indicator ---- */
 function initScrollIndicator() {
     const indicator = document.getElementById('scroll-indicator');
-    
+
     window.addEventListener('scroll', () => {
         if (window.scrollY > 200) {
             indicator.classList.add('hidden');
@@ -223,9 +219,9 @@ function initMusicToggle() {
     // The user can replace this URL with their own song
     audio = new Audio();
     audio.loop = true;
-    audio.volume = 0.3;
+    audio.volume = 0.05;
     // Placeholder: user can set their own music URL
-    // audio.src = 'path/to/your/song.mp3';
+    audio.src = 'img/EES.mp3';
 
     btn.addEventListener('click', () => {
         if (!audio.src || audio.src === window.location.href) {
